@@ -30,7 +30,6 @@ namespace ConsoleApp_QA
                 double lengt_AC = Methods.length(A, C);
                 double lengt_BC = Methods.length(B, C);
 
-
                 Console.WriteLine("Length line AB is " + lengt_AB);
                 Console.WriteLine("Length line AC is " + lengt_AC);
                 Console.WriteLine("Length line BC is " + lengt_BC);
@@ -40,13 +39,15 @@ namespace ConsoleApp_QA
                 Methods.IsRightTriangle(lengt_AB, lengt_AC, lengt_BC);
                 double perimeter = Methods.Perimeter(lengt_AB, lengt_AC, lengt_BC);
                 Console.WriteLine("Perimeter of this triangle is " + perimeter);
+                Console.WriteLine("Parity numbers in range from 0 to triangle perimeter: ");
                 Methods.Even(perimeter);
             }
             catch (FormatException ex)
             {
                 Console.WriteLine(ex.Message + " invalid data format");
             }
-            Console.ReadKey();
+            
+Console.ReadKey();
         }
 
         public class Point
